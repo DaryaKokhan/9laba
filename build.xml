@@ -21,10 +21,10 @@
     <target name="jar" depends="compile">
         <mkdir dir="${jar.dir}"/> <!-- Создаем директорию для JAR -->
         <jar destfile="${jar.name}" basedir="${classes.dir}"> <!-- Создаем JAR-файл -->
-<!--            <manifest>
-                <attribute name="Main-Class" value="App"/> &lt;!&ndash; Укажите правильный класс &ndash;&gt;
+            <manifest>
+                <attribute name="Main-Class" value="App"/>
             </manifest>
-            <fileset dir="${classes.dir}"/>-->
+            <fileset dir="${classes.dir}"/>
         </jar>
     </target>
 
