@@ -1,8 +1,8 @@
 <project name="9laba" default="jar" basedir=".">
-    <property name="src.dir" value="src/main/java"/>
+    <property name="src.dir" value="src/com/example"/>
     <property name="build.dir" value="build"/>
     <property name="dist.dir" value="dist"/>
-    <property name="jar.name" value="MyJavaProject.jar"/>
+    <property name="jar.name" value="9laba.jar"/>
 
     <target name="clean">
         <delete dir="${build.dir}"/>
