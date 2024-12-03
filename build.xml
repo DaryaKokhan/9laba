@@ -1,5 +1,5 @@
 <project name="9laba" default="jar" basedir=".">
-    <property name="src.dir" value="src/com/example"/>
+    <property name="src.dir" value="src"/>
     <property name="build.dir" value="build"/>
     <property name="dist.dir" value="dist"/>
     <property name="jar.name" value="9laba.jar"/>
