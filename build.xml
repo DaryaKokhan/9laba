@@ -24,6 +24,7 @@
             <manifest>
                 <attribute name="Main-Class" value="D:\java\9laba\src\App.java"/> <!-- Замените на ваш полный путь к классу с методом main -->
             </manifest>
+            <fileset dir="${classes.dir}"/>
         </jar>
     </target>
 
