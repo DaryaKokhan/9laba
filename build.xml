@@ -9,31 +9,30 @@
         <delete dir="${build.dir}"/>
     </target>
 
-    <target name="compile" depends="clean">
+    <target name="compile">
         <mkdir dir="${classes.dir}"/> <!-- Создаем директорию для классов -->
         <javac srcdir="${src.dir}" destdir="${classes.dir}"/> <!-- Компилируем исходники -->
     </target>
 
     <target name="run" depends="compile">
-        <java classname="App" fork="true" classpath="${classes.dir}"/>
+        <java classname="App" fork="true" classpath="${classes.dir}"/> <!-- Убедитесь, что класс указан правильно -->
     </target>
 
     <target name="jar" depends="compile">
         <mkdir dir="${jar.dir}"/> <!-- Создаем директорию для JAR -->
         <jar destfile="${jar.name}" basedir="${classes.dir}"> <!-- Создаем JAR-файл -->
             <manifest>
-                <attribute name="Main-Class" value="D:\java\9laba\src\App.java"/> <!-- Замените на ваш полный путь к классу с методом main -->
+                <attribute name="Main-Class" value="App"/> <!-- Укажите правильный класс -->
             </manifest>
             <fileset dir="${classes.dir}"/>
         </jar>
     </target>
 
     <target name="test" depends="compile">
-        <!-- Здесь можно добавить задачи для запуска тестов, если они есть -->
         <echo message="Running tests... (implement your test logic here)"/>
     </target>
 
-    <target name="all" depends="run, jar">
-        <echo message="Build complete! Run and JAR created successfully."/>
+    <target name="all" depends="clean, compile, jar, run"> <!-- Изменен порядок зависимостей -->
+        <echo message="Build complete! JAR created successfully."/>
     </target>
 </project>
