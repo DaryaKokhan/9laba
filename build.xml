@@ -20,10 +20,11 @@
 
     <target name="jar" depends="compile">
         <mkdir dir="${jar.dir}"/> <!-- Создаем директорию для JAR -->
-        <jar destfile="${jar.name}" basedir="${classes.dir}"/> <!-- Создаем JAR-файл -->
-        <manifest>
-            <attribute name="Main-Class" value="D:\java\9laba\src\App.java"/> <!-- Замените на ваш полный путь к классу с методом main -->
-        </manifest>
+        <jar destfile="${jar.name}" basedir="${classes.dir}"> <!-- Создаем JAR-файл -->
+            <manifest>
+                <attribute name="Main-Class" value="D:\java\9laba\src\App.java"/> <!-- Замените на ваш полный путь к классу с методом main -->
+            </manifest>
+        </jar>
     </target>
 
     <target name="test" depends="compile">
